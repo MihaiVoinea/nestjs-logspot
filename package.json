@@ -30,9 +30,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bzuker/nestjs-library-template"
+    "url": "https://github.com/MihaiVoinea/nestjs-logspot"
   },
-  "bugs": "https://github.com/bzuker/nestjs-library-template",
+  "bugs": "https://github.com/MihaiVoinea/nestjs-logspot",
   "peerDependencies": {
     "@nestjs/common": "^8.0.0",
     "rxjs": "^7.x"
