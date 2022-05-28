@@ -1,12 +1,6 @@
-<h1 align="center"></h1>
+<h1 align="center">nestjs-logspot</h1>
 
-<div align="center">
-  <a href="http://nestjs.com/" target="_blank">
-    <img src="https://nestjs.com/img/logo_text.svg" width="150" alt="Nest Logo" />
-  </a>
-</div>
-
-<h3 align="center">NestJS Logspot Module</h3>
+<p align="center">Injectable Logspot wrapper for NestJS</p>
 
 <div align="center">
   <a href="https://nestjs.com" target="_blank">
@@ -14,38 +8,36 @@
   </a>
 </div>
 
-### Installation
+## Getting Started
 
-1. Clone the repo
-2. Run npm/yarn install
+The simplest way to use `nestjs-logspot` is to use `LogspotModule.forRoot`
 
-```bash
-cd nestjs-library-template
-npm install
+```typescript
+import { Module } from '@nestjs-common';
+import { LogspotModule } from 'nestjs-stripe';
+
+@Module({
+  imports: [
+    LogspotModule.forRoot({
+      secretKey: 'sk_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', // Recommendation: Use env vars to store the secret key
+    }),
+  ],
+})
+export class AppModule {}
 ```
 
-# Publishing
+You can then inject Logspot into any of your injectables by using a custom decorator
 
-In order to publish to NPM, create a user in npmjs.com. Follow [this guide](https://dev.to/nestjs/publishing-nestjs-packages-with-npm-21fm) for a more detailed explanation.
+```typescript
+import { Injectable } from '@nestjs/common';
+import { InjectLogspot, LogspotService } from 'nestjs-stripe';
 
-This repo includes a Github Action that will publish the package to npm on each push to `main`, where the version in the package.json has changed. In order for this to work you need to add your NPM_TOKEN to the repository secrets
-More information [here](https://github.com/marketplace/actions/npm-publish).
-
-## Change Log
-
-See [Changelog](CHANGELOG.md) for more information.
-
-## Contributing
-
-Contributions welcome! See [Contributing](CONTRIBUTING.md).
-
-## Author
-
-Brian Zuker (https://twitter.com/Brian_Zuker))
+@Injectable()
+export class AppService {
+  constructor(@InjectLogspot() private readonly logspotService: LogspotService) {}
+}
+```
 
 ## License
 
 Licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-# Shoutout
-This repo was adapted from https://github.com/nestjsplus/nestjs-package-starter
