@@ -19,7 +19,8 @@ import { LogspotModule } from 'nestjs-stripe';
 @Module({
   imports: [
     LogspotModule.forRoot({
-      secretKey: 'sk_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', // Recommendation: Use env vars to store the secret key
+      // Recommendation: Use env vars to store the secret key
+      secretKey: 'sk_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
     }),
   ],
 })
