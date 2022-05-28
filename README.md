@@ -8,6 +8,12 @@
   </a>
 </div>
 
+## Installation
+
+```bash
+npm install --save nestjs-logspot
+```
+
 ## Getting Started
 
 The simplest way to use `nestjs-logspot` is to use `LogspotModule.forRoot`
