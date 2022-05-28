@@ -1,8 +1,8 @@
 {
-  "name": "nestjs-library-template",
-  "version": "1.0.1",
-  "description": "NestJS library template",
-  "author": "Brian Zuker <brianzuker@gmail.com>",
+  "name": "nestjs-logspot",
+  "version": "0.1.0",
+  "description": "NestJS Module for logspot.io",
+  "author": "Mihai Voinea <mihai@voinea.dev>",
   "license": "MIT",
   "readmeFilename": "README.md",
   "main": "dist/index.js",
@@ -22,10 +22,6 @@
     "test:cov": "jest --coverage",
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
-  "precommit": [
-    "lint:ci",
-    "test:cov"
-  ],
   "keywords": [
     "nestjs"
   ],
@@ -43,6 +39,7 @@
   },
   "dependencies": {
     "@golevelup/nestjs-modules": "^0.4.3",
+    "@logspot/node": "^2.0.1",
     "rxjs": "^7.x"
   },
   "devDependencies": {

@@ -6,7 +6,7 @@
   </a>
 </div>
 
-<h3 align="center">NestJS npm Library Template</h3>
+<h3 align="center">NestJS Logspot Module</h3>
 
 <div align="center">
   <a href="https://nestjs.com" target="_blank">

@@ -1,4 +1,5 @@
-export { AwesomeLibraryModule } from './awesome-library.module';
-export * from './awesome-library.service';
-export * from './awesome-library.constants';
-export * from './awesome-library.interfaces';
+export { LogspotModule } from './logspot.module';
+export * from './logspot.service';
+export * from './logspot.constants';
+export * from './logspot.interfaces';
+export * from './logspot.decorators';
