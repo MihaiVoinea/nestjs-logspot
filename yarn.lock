@@ -557,10 +557,12 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@logspot/node@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@logspot/node/-/node-2.0.1.tgz#c1db98f55abb5ce2e35fa07f27e60e1c930a0336"
-  integrity sha512-+6objfnMTqE4ieVYQDRXiUtZksuZh+sJVNcPB+63ne0huPrw00TwIuYvHhNAibfg+kkBcp8ks5YuudqevhfHCg==
+"@logspot/node@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@logspot/node/-/node-2.0.4.tgz#e0c53f56b050590ff43c47011de1c1a7bd4b9e09"
+  integrity sha512-mUtG1+G4gnpaKxtgIC9pkNfNnzsdF6v8H/ResR+F6XQMcSlBNkuhc2NdEYxBayQyDqDTMQ2t8ulS9GFOInywdQ==
+  dependencies:
+    node-fetch "^2.6.7"
 
 "@nestjs/common@^8.1.2":
   version "8.4.5"
@@ -3276,7 +3278,7 @@ node-cleanup@^2.1.2:
   resolved "https://registry.yarnpkg.com/node-cleanup/-/node-cleanup-2.1.2.tgz#7ac19abd297e09a7f72a71545d951b517e4dde2c"
   integrity sha1-esGavSl+Caf3KnFUXZUbUX5N3iw=
 
-node-fetch@^2.6.1:
+node-fetch@^2.6.1, node-fetch@^2.6.7:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
   integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
