@@ -39,6 +39,25 @@ export class AppService {
 }
 ```
 
+After you injected Logspot, you can use the track function to send events.
+
+```typescript
+import { Injectable } from '@nestjs/common';
+import { InjectLogspot, LogspotService } from 'nestjs-stripe';
+
+@Injectable()
+export class AppService {
+  constructor(@InjectLogspot() private readonly logspotService: LogspotService) {}
+
+  sendEvent(account) {
+    this.logspotService.track({
+      event: 'account.created',
+      userId: account.id,
+      metadata: { email: account.email },
+    });
+   }
+}
+```
 ## License
 
 Licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
