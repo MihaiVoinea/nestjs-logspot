@@ -1,6 +1,6 @@
 {
   "name": "nestjs-logspot",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "NestJS Module for logspot.io",
   "author": "Mihai Voinea <mihai@voinea.dev>",
   "license": "MIT",
